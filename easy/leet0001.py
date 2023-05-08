@@ -65,6 +65,8 @@ class Solution:
         return [-1, -1]                             # if n = 0 or no sol, return -1s
 
 
+# --------------
+# LeetCode test:
 # nums = [3, 2, 1, 0, 1, 5, 6, 5]; target = 7   # ans = [5, 1]
 nums = [1,1,1,1,1,4,1,1,1,1,1,7,1,1,1,1,1];  target = 11   # ans = [5, 11]
 sol = Solution()
