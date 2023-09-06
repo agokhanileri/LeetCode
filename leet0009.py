@@ -1,16 +1,17 @@
-# ----------------------------------------------------------------------
 # 0009. Palindrome Number
-# ----------------------------------------------------------------------
 # Given an integer x, return true if x is a palindrome
-# Q: if one digit? --> Palindrome
-# Q: Can pad with 0s s.t. 120 & 021? --> No, not Palindrome
-# Q: Negative number? --> Can't be Palindrome
+
+# ----------------------------------------------------------------------
+# Clarifications:
+# If one digit? --> Palindrome
+# Can pad with 0s s.t. 120 & 021? --> No, not Palindrome
+# Negative number? --> Can't be Palindrome
+
 # Inputs:
 x = 1221 # --> True
 
 # ----------------------------------------------------------------------
-# Sol1:
-# - Speed: O(n) / O(1)
+# Sol1: O(n) / O(1)
 strx = str(x)                     # integer as string
 n = len(strx)
 if n == 1:
@@ -25,9 +26,8 @@ else:
             break
     ans = True                      # no violations --> set True
 
-
 # ----------------------------------------------------------------------
-# LeetCode submit: Sol2, O() / O()
+# Submit: Sol1, O(n) / O(1)
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         intstr = str(x)
@@ -41,23 +41,8 @@ class Solution:
                 if intstr[i] != intstr[-1-i]:
                     return False
         return True
-
 
 # --------------
-# LeetCode test:
+# Test:
 sol = Solution()
 print(sol.isPalindrome(x))
-
-class Solution:
-    def isPalindrome(self, x: int) -> bool:
-        intstr = str(x)
-        n = len(intstr)
-        if n == 1:
-            return True
-        elif (x < 0) or (intstr[-1]=='0'):
-            return False
-        else:
-            for i in range(0, n//2):
-                if intstr[i] != intstr[-1-i]:
-                    return False
-        return True

@@ -1,14 +1,16 @@
-# ----------------------------------------------------------------------
 # 0001. Two Sum
-# ----------------------------------------------------------------------
 # Return indices of the two numbers such that they add up to target. Only one valid answer exists.
+
+# ----------------------------------------------------------------------
+# Clarifications:
+# 
+
 # Inputs:
 nums = [3, 2, 5, 6, 5]; target = 7   # ans = [1, 2]
 n = len(nums)
 
 # ----------------------------------------------------------------------
-# Sol1: Brute force
-# - Speed: O(n^2) / O(1)
+# Sol1: Brute force, O(n^2) / O(1)
 ans = [-1, -1]
 for i in range(n):
     for j in range(i+1, n):
@@ -20,8 +22,7 @@ for i in range(n):
 print(ans)
 
 # ----------------------------------------------------------------------
-# Sol2: Hashtable, need to keep a reversed dict for O(1) lookup, or use enumarate
-# - Speed: O(n) / O(1)
+# Sol2: Hashtable, need to keep a reversed dict for O(1) lookup, or use enumarate. O(n) / O(1)
 ans = [-1, -1]
 ht1 = dict()             # can't use hset since we need the report the index
 ht2 = dict()
@@ -41,9 +42,8 @@ for i in range(n):
 
 print(ans)
 
-
 # ----------------------------------------------------------------------
-# LeetCode submit: Sol2, O(n) / O(1)
+# Submit: Sol2, O(n) / O(1)
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         n = len(nums)
@@ -64,9 +64,7 @@ class Solution:
 
         return [-1, -1]                             # if n = 0 or no sol, return -1s
 
-
-# --------------
-# LeetCode test:
+# Test:
 # nums = [3, 2, 1, 0, 1, 5, 6, 5]; target = 7   # ans = [5, 1]
 nums = [1,1,1,1,1,4,1,1,1,1,1,7,1,1,1,1,1];  target = 11   # ans = [5, 11]
 sol = Solution()
