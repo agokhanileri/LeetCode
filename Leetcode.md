@@ -8,14 +8,12 @@ LeetCode
 |-----------------------------------------------------------------------------------------------------------------------|-----------------------|-----------------------|------------|
 | [0001. Two Sum](https://leetcode.com/problems/two-sum)                                                               	| [sol](.\leet0001.py)  | Hashing, 2ptr     	| 49%        |
 | [0009. Palindrome Number](https://leetcode.com/problems/palindrome-number)                                           	| [A](https://C:\Users\atpde\Dropbox\Repos\LeetCode\leet009.py)  	|   ..   |  xx% |
-
 | [0009. Palindrome Number](https://leetcode.com/problems/palindrome-number)                                           	| [B](https://./leet009.py)  	| .. | xx% |
 | [0009. Palindrome Number](https://leetcode.com/problems/palindrome-number)                                          	| [C](https://.\leet009.py)  	| .. | xx% |
 | [0009. Palindrome Number](https://leetcode.com/problems/palindrome-number)                                          	| [D](\leet009.py)  	| .. | xx% |
 | [0009. Palindrome Number](https://leetcode.com/problems/palindrome-number)                                          	| [E](/leet009.py)  	| .. | xx% |
 | [0009. Palindrome Number](https://leetcode.com/problems/palindrome-number)                                          	| [F](./leet009.py)  	| .. | xx% |
-| [0009. Palindrome Number](https://leetcode.com/problems/palindrome-number)                                          	| [G](https://github.com/alexgileri/LeetCode/tree/9b1d17b975a617b35f721ba062fb2808a48c9f34)  	| .. | xx% |
-
+| [0009. Palindrome Number](https://leetcode.com/problems/palindrome-number)                                          	| [G](https://github.com/alexgileri/LeetCode/blob/9b1d17b975a617b35f721ba062fb2808a48c9f34/leet0009.py)  	| .. | xx% |
 | [0013. Roman to Integer](https://leetcode.com/problems/roman-to-integer)                                             	| [TBD](./leet0013.py)  | Hashing           	| 58%        |
 | [0014. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)                                  	| [TBD](./leet0014.py)  | X, X              	| 40%        |
 | [0020. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)                                          	| [TBD](./leet0020.py)  | X, X              	| 41%        |
