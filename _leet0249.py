@@ -26,19 +26,35 @@ for s in strings:
         ans{m} = s
         
     
+string = "acd"  
+m = len(word)
+
+for ch in string  
+
+
+
+
+for i in range(1,n):
+    diff = ord(word[i]) - ord(word[i-1])
+    
+    
+    
+    diff = ord(ch) - ord(ch)
+    
+ord("a") - ord("b")
     
 
 # ----------------------------------------------------------------------
 # Submit: Sol1, O() / O()
 class Solution:
-    def 
-    
-        return 
+    def groupStrings(self, strings):
+        n = len(strings)
+        return n
 
 # --------------
 # Test:
 sol = Solution()
-print(sol.YYYY(x))
+print(sol.groupStrings(strings))
 
 d = dict()
 d{'1'} = 'a'

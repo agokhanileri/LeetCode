@@ -5,8 +5,6 @@
 
 # ----------------------------------------------------------------------
 # Clarifications:
-
-
 Explanation: "the", "is", "sunny" and "day" are the four most frequent words, with the number of occurrence being 4, 3, 2 and 1 respectively.
 
 
