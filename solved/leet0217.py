@@ -1,6 +1,7 @@
+# Author: alexg
 # 0217. Contains Duplicate
 # - Given an integer array nums, return true if any value appears at least twice in the array, 
-# and return false if every element is distinct.
+# - and return false if every element is distinct.
 
 # ----------------------------------------------------------------------
 # Clarifications:
@@ -14,29 +15,31 @@ nums = [1,2,3,4]
 
 
 # ----------------------------------------------------------------------
-# Sol1: O() / O()
+# Sol1: O(n) / O(n)
 n = len(nums)
 dic = {}
 ans = False
-for i in nums:
-    if i in dic.keys():                # if seen before
+for k in nums:
+    print(k, list(dic.keys()))
+    if k in dic.keys():                # if seen before
         ans = True        
     else:
-        dic[i] =+ 1             # inc count
-
-
+        dic[k] =+ 1             # inc count
+ans
 
 
 # ----------------------------------------------------------------------
-# Submit: Sol1, O() / O()
+# Submit: Sol1 with hashset instead of dic, O() / O()
 class Solution:
     def containsDuplicate(self, nums: list):
         #n = len(nums)
-        dic = {}        
-        for i in nums:
-            print(i, list(dic.keys()))
-            if i in list(dic.keys()):                # if seen before
-                return True            
+        hset = set()
+        for k in nums:
+            #print(k, hset)
+            if k in hset:                # if seen before
+                return True
+            else:
+            hset.add(k)
         return False                    # if no duplicates found
 
 # --------------
