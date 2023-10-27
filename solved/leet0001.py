@@ -1,9 +1,11 @@
+# Author: alexgileri
 # 0001. Two Sum
-# Return indices of the two numbers such that they add up to target. Only one valid answer exists.
+# Return indices of the two numbers such that they add up to target. Only 1 valid answer exists.
 
 # ----------------------------------------------------------------------
 # Clarifications:
-# 
+# Assume there will be exactly 1 sol. You can't use the same element twice.
+# 2 <= nums.length <= 10e4, -10e9 <= nums[i] <= 10e9, -10e9 <= target <= 10e9
 
 # Inputs:
 nums = [3, 2, 5, 6, 5]; target = 7   # ans = [1, 2]
@@ -42,6 +44,7 @@ for i in range(n):
 
 print(ans)
 
+
 # ----------------------------------------------------------------------
 # Submit: Sol2, O(n) / O(1)
 class Solution:
@@ -55,7 +58,7 @@ class Solution:
             if (target - nums[i]) in ht1.values():  # if there's a match, we are done
                 j = ht2[(target - nums[i])]         # obtain the index of first pair,
                 # can overwrite j since we are done anyway
-                return [j, i]       # report and quit (there 1 sol only)
+                return [j, i]                       # report and quit since there is only 1 sol
 
             if nums[i] not in ht1.values():         # if not seen before
                 ht1[j] = nums[i]

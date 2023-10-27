@@ -1,7 +1,7 @@
-# Author: alexg
+# Author: alexgileri
 # 0217. Contains Duplicate
-# - Given an integer array nums, return true if any value appears at least twice in the array, 
-# - and return false if every element is distinct.
+# Given an integer array nums, return true if any value appears at least twice in the array, 
+# Return false if every element is distinct.
 
 # ----------------------------------------------------------------------
 # Clarifications:
@@ -12,7 +12,6 @@
 nums = [1,2,3,3]
 nums = [1,2,3,2]
 nums = [1,2,3,4]
-
 
 # ----------------------------------------------------------------------
 # Sol1: O(n) / O(n)

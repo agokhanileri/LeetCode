@@ -37,18 +37,3 @@ class Solution:
 sol = Solution()
 print(sol.YYYY(x))
 
-# ----------------------------------------------------------------------
-# Sol1: O() / O()
-
-
-# ----------------------------------------------------------------------
-# Submit: Sol1, O() / O()
-class Solution:
-    def 
-    
-        return 
-
-# --------------
-# Test:
-sol = Solution()
-print(sol.YYYY(x))

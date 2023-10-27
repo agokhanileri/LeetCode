@@ -1,4 +1,4 @@
-# Author: alexg
+# Author: alexgileri
 # 0136. Single Number
 # - Given a non-empty array of integers nums, every element appears twice except for one. Find it.
 # - need O(n)/O(1) sol
@@ -9,7 +9,6 @@
 
 # Inputs:
 nums = [4,1,2,1,3, 2, 4]
-
 
 # ----------------------------------------------------------------------
 # Sol1: Using dict as hashset O(n) / O(n)
@@ -24,7 +23,6 @@ else:
         else:
             del dic[i]          # instead of increasing the count, delete the whole key
     ans = list(dic.keys())[0]   # so the remaning item will be the singleNumber
-
 
 # ----------------------------------------------------------------------
 # Sol2: Using Bitwise, O(1) / O(1)
