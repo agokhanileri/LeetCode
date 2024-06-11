@@ -1,7 +1,5 @@
-# Author: alexgileri
 # 0136. Single Number
-# - Given a non-empty array of integers nums, every element appears twice except for one. Find it.
-# - need O(n)/O(1) sol
+# Given a non-empty array of integers nums, every element appears twice except for one. Find it in O(n)/O(1) sol.
 
 # ----------------------------------------------------------------------
 # Clarifications:

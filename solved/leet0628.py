@@ -1,5 +1,4 @@
-# Author: alexgileri
-# 628. Maximum Product of Three Numbers
+# 0628. Maximum Product of Three Numbers
 # Given an integer array nums, find three numbers whose product is max and return the max product.
 
 # ----------------------------------------------------------------------

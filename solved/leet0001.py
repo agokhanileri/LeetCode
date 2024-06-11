@@ -1,4 +1,3 @@
-# Author: alexgileri
 # 0001. Two Sum
 # Return indices of the two numbers such that they add up to target. Only 1 valid answer exists.
 
