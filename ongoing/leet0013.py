@@ -1,49 +1,33 @@
 # 0013. Roman to Integer
 # Roman numerals are represented by seven different symbols: I, V, X, L, C, D, M
-
+# L = 50, C = 100, D = 500, M = 1000
 # ----------------------------------------------------------------------
 # Clarifications:
-# 1 <= s.length <= 15
-# s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
-# It is guaranteed that s is a valid roman numeral in the range [1, 3999].
+# 1 <= s.length <= 15 
+# s contains only roman characters and is the range [1, 3999]
 
 # ----------------------------------------------------------------------
 # Inputs:
-s = "LVIII"   # ans = 
-# s = "MCMXCIV"
+#s = "LVIII"   # ans = 58
+s = "MCMXCIV"  # ans = 1000 + 900 + 90 + 4 = 1994
 
 # ----------------------------------------------------------------------
-# Sol1: BruteForce, O(n^2) / O(1), Can't sort ince we need to keep the days, 
-n = len(prices)
-profit = 0
-for i in range(n):
-    j = i + 1
-    profit_temp = 0
-    while j < n:
-        profit_temp = max(profit_temp, prices[j] - prices[i])
-        print(i, j, profit_temp, profit)
-        j = j + 1 
-    print(i, profit_temp, profit)        
-    profit = max(profit, profit_temp)    
+# Sol1: O(1) / O(1)
+# Negative numbers can only occur in a pair AB if A < B
+# So we can slide [AB] left to right
+n = len(s)
+d = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
 
-# ----------------------------------------------------------------------
-# Sol2: 2ptr, O(n) / O(1)
-n = len(prices)
-l = 0   # buy index
-r = 1   # sell index
-# buy_price = prices[i]
-max_profit = 0                           # default return value 
-#for i in range(1, n-1):                 # can't buy at the last day
-while r < n:
-    if (prices[l] < prices[r]):         # if there is a better buy price found
-        profit = prices[r] - prices[l]  # calculate the temp profit
-        max_profit = max(max_profit, profit)  # update the main profit
-    else:                       # vice verse if better sell price found            
-        l = r                   # move the buy ptr to the new local minima found
-    r += 1              
-max_profit
+res = 0     # will be summed left to right, ignoring the last element
+for i in range(n-1):    # scan characters L2R in sliding windows of 2 (AB)
+    if d[s[i]] < d[s[i+1]]:  # if A<B it means A is neg.
+        res -= d[s[i]]
+    else: 
+        res += d[s[i]]
+res += d[s[-1]]     # last element has no follower --> always pos.
+res
 
-# ----------------------------------------------------------------------
+
 # ----------------------------------------------------------------------
 # Submit: 2ptr, O(n) / O(1)
 class Solution:
@@ -67,4 +51,3 @@ class Solution:
 sol = Solution()
 print(sol.maxProfit(prices))
 
-        
